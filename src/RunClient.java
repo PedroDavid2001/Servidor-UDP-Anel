@@ -9,8 +9,8 @@ public class RunClient {
     void rodar( int port ){
         try {
             
-            //Cada cliente será executado em um processo exclusivo
-            Client cliente = new Client(port, "192.168.1.102");
+            //Altere a String com o ip da sua máquina
+            Client cliente = new Client(port, "IP-da-maquina");
             
             System.out.println("Cliente enviando datagramas à porta: " + port);
 
@@ -24,6 +24,10 @@ public class RunClient {
     }
 
     public static void main(String[] args){
+        /*
+        * altere a porta para o valor que o terminal 
+        * mostrar quando criar o servidor deste cliente
+        */
         new RunClient(10001);
     }
 }
