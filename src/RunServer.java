@@ -1,6 +1,7 @@
 package Questao1;
 
 public class RunServer {
+    //O código de servidor já altera a porta automaticamente quando necessário
     int port = 10001;
     
     public RunServer() {
@@ -10,8 +11,8 @@ public class RunServer {
     private void rodar() {
         try {
 
-            // Cria uma thread do servidor para tratar a conexão
-            Server servidor = new Server( port, "192.168.1.102", "192.168.1.102" ); ///10.70.1.x ou localhost
+            // Nos argumentos, você altera as String de da sua máquina e ip da máquina destino
+            Server servidor = new Server( port, "IP-da-maquina", "IP-Dest" );
             Thread serverThread = new Thread(servidor);
 
             serverThread.start();
